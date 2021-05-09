@@ -1,0 +1,21 @@
+body { margin:0px; width: 100%; height: 100%;  }
+.bg { background-image: url('../../../assets/details.png'); 
+    width: 100%; height: 100%; 
+    background-size: 100% 100%; 
+    background-repeat: no-repeat; }
+
+
+    .text-left
+    {
+      
+          padding-left: 100px;
+          padding-top:20px;
+         
+          font-style: italic;
+          color: black;
+        
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+          
+      
+    }

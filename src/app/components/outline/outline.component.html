@@ -1,0 +1,73 @@
+<div class="bg">
+    <header >
+        <div class="text">
+        Statistics
+    </div>
+    </header>
+    <div class="card-container">
+        <!--Room details Card-->
+
+        <mat-card class="card-1" *ngIf="cardOneLoadComplete">
+            <div class="card-head">
+                <div class="card-logo">
+                    <span class="card-name">Room Inventory</span> <mat-icon>room</mat-icon>
+                </div>
+            </div>
+            <div class="items" #elseBlock>
+                <div class="mat-item">
+                    <p>Total Rooms:39 <span class="card-value">  <!--      {{availableRooms.length + bookedRooms.length}}--> </span></p>
+                </div>
+                <div class="mat-item">
+                    <p>Available Rooms: 30<span class="card-value"><!--{{availableRooms.length}}--></span></p>
+                </div>
+                <div class="mat-item">
+                    <p>Booked Rooms: 9 <span class="card-value"><!--  {{bookedRooms.length}} --></span></p>
+                </div>
+                <div class="mat-item">
+                    <p>Status: Available <span class="card-value"> <!-- {{availableRooms.length == 0? 'Full' : 'Rooms
+                            Available'}} --></span></p>
+                </div>
+
+            </div>
+        </mat-card>
+      <!--  <mat-card class="card-2" *ngIf="cardTwoLoadComplete">
+            <div class="card-head">
+                <div class="card-logo">
+                    <span class="card-name">Guests Overview</span> <mat-icon>group</mat-icon>
+                </div>
+            </div>
+            <div class="items" #elseBlock>
+                <div class="mat-item">
+                    <p>Total Guests: <span class="card-value">{{guestData.length}}</span></p>
+                </div>
+                <div class="mat-item">
+                    <p>Checked-In:<span class="card-value">{{checkedInGuests.length}}</span></p>
+                </div>
+
+            </div>
+        </mat-card>
+        -->
+        
+        <mat-card class="card-3" *ngIf="cardThreeLoadComplete">
+            <div class="card-head">
+                <div class="card-logo">
+                    <span class="card-name">Employee Inventory</span> <mat-icon>work</mat-icon>
+                </div>
+            </div>
+            <div class="items" #elseBlock>
+                <div class="mat-item">
+                    <p>Owners: <span class="card-value">{{owners}}</span></p>
+                </div>
+                <div class="mat-item">
+                    <p>Managers:<span class="card-value">{{managers}}</span></p>
+                </div>
+                <div class="mat-item">
+                    <p>Receptionists: <span class="card-value">{{receptionists}}</span></p>
+                </div>
+
+            </div>
+        </mat-card>
+    </div>
+    
+</div>
+<footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>

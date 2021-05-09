@@ -1,0 +1,39 @@
+
+<body class="d-flex flex-column min-vh-100">
+    <div class="wrapper flex-grow-1" id="bg">
+        <div class="col-md-8 offset-md-2">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Mobile Number</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let guest of guests">
+            <td>{{guest.id}}</td>
+            <td>{{guest.name}}</td>
+            <td>{{guest.gender}}</td>
+            <td>{{guest.age}}</td>
+            <td>{{guest.mobileNo}}</td>
+
+            <td>
+                <button (click)= "updateGuest(guest.id)" class="btn btn-warning">Update</button>
+                <button (click)= "deleteGuest(guest.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                <button (click)= "guestDetails(guest.id)" class="btn btn-info" style="margin-left: 10px;">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+
+
+
+</body>
+
+<footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>

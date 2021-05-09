@@ -1,0 +1,67 @@
+<style>
+  input{
+    background-color: darkcyan;
+    color: black;
+  }
+</style>
+
+
+<div class="bg">
+  <h1 class="text-left">Add Room</h1>
+<div class="col-md-4 offset-md-4">
+ 
+    
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="form-group">
+            <label>Room Type</label>
+            <input type="text" class="form-control" id="roomType" [(ngModel)] = "room.roomType" name="roomType" #roomType="ngModel" required minlength="4">
+            <div *ngIf="roomType.invalid && (roomType.dirty || roomType.touched)"
+        class="alert alert-danger">
+    
+      <div *ngIf="roomType.errors.required">
+        Room Type is required.
+      </div>
+      <div *ngIf="roomType.errors.minlength">
+        Room Type must be at least 4 characters long.
+      </div>
+      <div *ngIf="roomType.errors.forbiddenName">
+        Room cannot be Bob.
+      </div>
+    
+        </div>
+        </div>
+    
+        <div class="form-group">
+            <label>Status</label>
+            <input type="text" class="form-control" id="status" [(ngModel)] = "room.status" name="status" #status="ngModel" required>
+
+            <div *ngIf="status.invalid && (status.dirty || status.touched)"
+            class="alert alert-danger">
+        
+          <div *ngIf="status.errors.required">
+            Status is required.
+          </div>
+          <div *ngIf="status.errors.minlength">
+            Status must be at least 3 characters long.
+          </div>
+          <div *ngIf="status.errors.forbiddenName">
+            Status cannot be Bob.
+          </div>
+        
+           
+            </div>
+
+
+        </div>
+
+       
+    </form>
+    <br>
+    <button class="btn btn-success" type="submit" (click)="onSubmit()" [disabled]="!loginForm.valid">Submit</button>
+  
+
+  </div>
+ </div>
+
+
+ <footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>

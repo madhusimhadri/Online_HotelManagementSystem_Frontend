@@ -1,0 +1,46 @@
+
+<body class="d-flex flex-column min-vh-100" >
+    <div class="wrapper flex-grow-1" id="bg">
+       
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Invoice Id</th>
+            <th>Guest Id</th>
+            <th>Guest Mobile</th>
+            <th>Booked Room Type</th>
+            <th>Room Price</th>
+            <th>No Of Nights</th>
+            <th>Total Bill</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let payment of payments">
+            <td>{{payment.id}}</td>
+            <td>{{payment.invoice.guestId}}</td>
+            <td>{{payment.invoice.guestMobile}}</td>
+            <td>{{payment.invoice.bookedRoomType}}</td>
+            <td>{{payment.invoice.roomPricePerNight}}</td>
+            <td>{{payment.invoice.nights}}</td>
+            <td>{{payment.invoice.totalBill}}</td>
+            <td>{{payment.status}}</td>
+
+            <td>
+                <button (click)= "updateInvoice(payment.id)" class="btn btn-warning">Update</button>
+                <button (click)= "deleteInvoice(payment.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                <button (click)= "viewInvoice(payment.id)" class="btn btn-info" style="margin-left: 10px;">View</button>
+                <button (click)= "Payment()" class="btn btn-info" style="margin-left: 10px;">Payment</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+    
+</body>
+<footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>
+
+

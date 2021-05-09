@@ -1,0 +1,280 @@
+<style>
+  input{
+    background-color: black;
+    color: yellow;
+  }
+</style>
+
+
+<body><h1 class="text-left">Add Employee</h1>
+  <div class="bg">
+    
+<div class="col-md-4 offset-md-8  ">
+
+
+<form (ngSubmit)="onSubmit()" id="userInfoForm" #loginForm="ngForm" >
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" placeholder="enter name" class="form-control" id="name" [(ngModel)] = "employee.name" name="name" #name="ngModel" required minlength="4">
+
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="name.errors.required">
+    Name is required.
+  </div>
+  <div *ngIf="name.errors.minlength">
+    Name must be at least 4 characters long.
+  </div>
+  <div *ngIf="name.errors.forbiddenName">
+    Name cannot be Bob.
+  </div>
+
+    </div>
+                
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="text" placeholder="assign password" class="form-control" id="password" [(ngModel)] = "employee.password" name="password" #password="ngModel" required minlength="6">
+
+        <div *ngIf="password.invalid && (password.dirty || password.touched)"
+        class="alert alert-danger">
+    
+      <div *ngIf="password.errors.required">
+        Password is required.
+      </div>
+      <div *ngIf="password.errors.minlength">
+        Password must be at least 6 characters long.
+      </div>
+      <div *ngIf="password.errors.forbiddenName">
+        Name cannot be Bob.
+      </div>
+    
+        </div>
+                    
+
+    </div>
+
+    <div class="form-group">
+        <label>Role</label>
+       <!-- <select name="role" id="role">
+            <option value="receptionist" id="role" [(ngModel)] = "employee.role" >RECEPTIONIST</option> 
+            <option value="manager" id="role" [(ngModel)] = "employee.role" >MANAGER</option> 
+            <option value="owner" id="role" [(ngModel)] = "employee.role" >OWNER</option> 
+        </select> --> 
+       <input type="text" placeholder="assign role" class="form-control" id="role" [(ngModel)] = "employee.role" name="role" #role="ngModel" required minlength="5" appForbiddenName="admin"> 
+
+       <div *ngIf="role.invalid && (role.dirty || role.touched)"
+       class="alert alert-danger">
+   
+     <div *ngIf="role.errors.required">
+       Role is required.
+     </div>
+     <div *ngIf="role.errors.minlength">
+       Role must be at least 5 characters long.
+     </div>
+     <div *ngIf="role.errors.forbiddenName">
+       Role cannot be admin.
+     </div>
+   
+       </div>
+                  
+
+
+    </div>
+
+    <div class="form-group">
+        <label>Salary</label>
+        <input type="number" placeholder="enter salary" class="form-control" id="salary" [(ngModel)] = "employee.salary" name="salary" #salary="ngModel" required minlength="5">
+
+        <div *ngIf="salary.invalid && (salary.dirty || salary.touched)"
+        class="alert alert-danger">
+    
+      <div *ngIf="salary.errors.required">
+        Salary is required.
+      </div>
+      <div *ngIf="salary.errors.minlength">
+        Salary must be at least 5 digits long.
+      </div>
+      <div *ngIf="salary.errors.forbiddenName">
+        salary cannot be admin.
+      </div>
+    
+        </div>        
+
+    </div>
+
+    <div class="form-group">
+       
+        <label>Contact Details</label><br><br>
+        <div class="col-sm-12">
+            <div>
+                 <label>Email</label>
+                 <input type="email" placeholder="enter email" class="form-control" id="email" [(ngModel)] = "employee.details.email" name="email" #email="ngModel" required minlength="8" >
+
+                 <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                 class="alert alert-danger">
+             
+               <div *ngIf="email.errors.required">
+                 Email is required.
+               </div>
+               <div *ngIf="email.errors.minlength">
+                 Email must contain @domainname.com extension
+               </div>
+               <div *ngIf="email.errors.forbiddenName">
+                 Email cannot be admin.
+               </div>
+             
+                 </div>        
+
+            </div>
+          </div>
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label>Country</label>
+                <input type="text" placeholder="enter country" class="form-control" id="country" [(ngModel)] = "employee.details.country" name="country" #country="ngModel" required minlength="3"> 
+
+                <div *ngIf="country.invalid && (country.dirty || country.touched)"
+                 class="alert alert-danger">
+             
+               <div *ngIf="country.errors.required">
+                 Country is required.
+               </div>
+               <div *ngIf="country.errors.minlength">
+                 Country must be atleast 3 characters long
+               </div>
+               <div *ngIf="country.errors.forbiddenName">
+                 Country cannot be admin.
+               </div>
+             
+                 </div>        
+                </div>
+           
+
+           
+            <div class="col-sm-6">
+                <label>State</label>
+                <input type="text" placeholder="enter state" class="form-control" id="state" [(ngModel)] = "employee.details.state" name="state" #state="ngModel" required minlength="3">
+
+                <div *ngIf="state.invalid && (state.dirty || state.touched)"
+                class="alert alert-danger">
+            
+              <div *ngIf="state.errors.required">
+                State is required.
+              </div>
+              <div *ngIf="state.errors.minlength">
+                State must be atleast 3 characters long
+              </div>
+              <div *ngIf="state.errors.forbiddenName">
+                State cannot be admin.
+              </div>
+            
+                </div>   
+                </div>
+           
+
+           <div class="col-sm-6">
+                <label>City</label>
+                <input type="text" placeholder="enter city" class="form-control" id="city" [(ngModel)] = "employee.details.city" name="city" #city="ngModel" required minlength="3">
+
+                <div *ngIf="city.invalid && (city.dirty || city.touched)"
+                class="alert alert-danger">
+            
+              <div *ngIf="city.errors.required">
+                City is required.
+              </div>
+              <div *ngIf="city.errors.minlength">
+                City must be atleast 3 characters long
+              </div>
+              <div *ngIf="city.errors.forbiddenName">
+                City cannot be admin.
+              </div>
+            
+                </div> 
+
+           </div>
+
+           <div class="col-sm-6">
+            <label>Street</label>
+            <input type="text" placeholder="enter street" class="form-control" id="street" [(ngModel)] = "employee.details.street" name="street" #street="ngModel" required minlength="3">
+
+            
+            <div *ngIf="street.invalid && (street.dirty || street.touched)"
+            class="alert alert-danger">
+        
+          <div *ngIf="street.errors.required">
+            Street is required.
+          </div>
+          <div *ngIf="street.errors.minlength">
+            Street must be atleast 3 characters long
+          </div>
+          <div *ngIf="street.errors.forbiddenName">
+            Street cannot be admin.
+          </div>
+        
+            </div> 
+
+           </div>
+
+           <div class="col-sm-6">
+            <label>Zipcode</label>
+            <input type="text" placeholder="enter zipcode" class="form-control" id="zipcode" [(ngModel)] = "employee.details.zipcode" name="zipcode" #zipcode="ngModel" required minlength="6">
+
+            <div *ngIf="zipcode.invalid && (zipcode.dirty || zipcode.touched)"
+            class="alert alert-danger">
+        
+          <div *ngIf="zipcode.errors.required">
+            Zipcode is required.
+          </div>
+          <div *ngIf="zipcode.errors.minlength">
+            Zipcode must be atleast 6 digits long
+          </div>
+          <div *ngIf="zipcode.errors.forbiddenName">
+            Zipcode cannot be admin.
+          </div>
+        
+            </div> 
+
+            
+
+
+           </div>
+
+           <div name="newForm" class="col-sm-6">
+            <label>Mobile Number</label>
+            <input type="number" placeholder="enter mobile number" class="form-control" id="number" [(ngModel)] = "employee.details.mobileNo" name="number" #number="ngModel" minlength="10" required  ng-required="true">
+
+
+            <div *ngIf="number.invalid && (zipcode.dirty || number.touched)"
+            class="alert alert-danger">
+        
+          <div *ngIf="number.errors.required">
+            Mobile No is required.
+          </div>
+          <div *ngIf="number.errors.minlength">
+            Mobile No must be atleast 10 digits long
+          </div>
+          <div *ngIf="number.errors.forbiddenName">
+            Mobile No cannot be admin.
+          </div>
+        
+            </div> 
+
+            
+</div>
+
+           </div>
+    </div>
+    <br>
+    <button class="btn btn-success" type="submit" (click)="onSubmit()" [disabled]="!loginForm.valid">Submit</button>
+    
+
+
+
+</form>
+</div>
+</div>
+</body>
+
+<footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>

@@ -1,0 +1,58 @@
+<div class="bg">
+    <div class="text-left">
+
+<div id="pdf">
+    <div>
+        <h1 class="text-left">Invoice</h1>
+        
+        <label><b> Invoice Id: </b>{{payment.id}}</label>
+    </div>
+    <div>
+      
+
+        <div>
+            <label><b>Company Name: </b>{{payment.invoice.companyName}}</label>
+        </div>
+        <div>
+            <label><b>Guest Id: </b>{{payment.invoice.guestId}}</label>
+        </div>
+        <div>
+            <label><b>Guest Name: </b>{{payment.invoice.guestName}}</label>
+        </div>
+        <div>
+            <label><b>Guest Mobile: </b>{{payment.invoice.guestMobile}}</label>
+        </div>
+        <div>
+            <label><b>Number of People: </b>{{payment.invoice.numberOfPeople}}</label>
+        </div>
+        <div>
+            <label><b>Booked Room Type: </b>{{payment.invoice.bookedRoomType}}</label>
+        </div>
+        <div>
+            <label><b>Room Price: </b>{{payment.invoice.roomPricePerNight}}</label>
+        </div>
+        <div>
+            <label><b>Number of Nights: </b>{{payment.invoice.nights}}</label>
+        </div>
+        <div>
+            <label><b>Booking Date: </b>{{payment.invoice.bookingDate}}</label>
+        </div>
+        <div>
+            <label><b>Tax: </b>{{payment.invoice.tax}}</label>
+        </div>
+        <div>
+            <label><b>Total Bill: </b>{{payment.invoice.totalBill}}</label>
+        </div>
+    </div>
+    <div>
+        <label><b>Status: </b>{{payment.status}}</label><br><br>
+    </div>
+
+    <button  type="submit" (click)="download()">Download Pdf</button> <br><br>
+
+<button class="btn btn-secondary" type="submit" (click)="onSubmit()">Back</button>
+    
+</div>
+
+</div>
+</div>

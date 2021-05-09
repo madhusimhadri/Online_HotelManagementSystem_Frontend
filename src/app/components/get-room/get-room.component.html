@@ -1,0 +1,47 @@
+
+
+<body class="d-flex flex-column min-vh-100" >
+    <div class="wrapper flex-grow-1" id="bg">
+        <div class="col-md-6 offset-md-3">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Room Type</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let room of rooms">
+            <td>{{room.id}}</td>
+            <td>{{room.roomType}}</td>
+            <td>{{room.status}}</td>
+            <td>
+                <button (click)= "updateRoom(room.id)" class="btn btn-warning">Update</button>
+                <button (click)= "deleteRoom(room.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                <button (click)= "roomDetails(room.id)" class="btn btn-info" style="margin-left: 10px;">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+
+    
+</body>
+<footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>
+
+
+<!--
+<footer class="footer">
+    <div class="container">
+        <span class="arrange">All Rights Reserved 2021 @Hotel</span>
+    </div>
+</footer>
+
+-->
+
+
+
+

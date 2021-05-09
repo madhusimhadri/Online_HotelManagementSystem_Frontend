@@ -1,0 +1,49 @@
+
+
+<body class="d-flex flex-column min-vh-100" >
+    <div class="wrapper flex-grow-1" id="bg">
+        <div class="col-md-6">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.role}}</td>
+            <td>{{employee.salary}}</td>
+            <td>
+                <button (click)= "updateEmployee(employee.id)" class="btn btn-warning">Update</button>
+               <button (click)= "deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+               <button (click)= "employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px;">View</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+
+
+    
+</body>
+<footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>
+
+<!--
+<footer class="footer">
+    <div class="container">
+        <span class="arrange">All Rights Reserved 2021 @Hotel</span>
+    </div>
+</footer>
+
+-->
+
+
+

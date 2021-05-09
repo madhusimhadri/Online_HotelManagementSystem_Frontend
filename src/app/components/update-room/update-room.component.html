@@ -1,0 +1,29 @@
+<style>
+    input{
+      background-color: gray;
+      color: black;
+    }
+  </style>
+  <div class="bg">
+
+<div class="col-md-4 offset-md-4" id="aDiv" >
+ 
+    <h1 class="text-left ">Update Room</h1>
+    
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Room Type</label>
+            <input type="text" class="form-control" id="roomType" [(ngModel)] = "room.roomType" name="roomType">
+        </div>
+    
+        <div class="form-group">
+            <label>Status</label>
+            <input type="text" class="form-control" id="status" [(ngModel)] = "room.status" name="status">
+        </div>
+
+       
+    </form>
+    <br>
+    <button class="btn btn-success" type="submit" (click)="onSubmit()">Submit</button>
+    </div>
+</div>

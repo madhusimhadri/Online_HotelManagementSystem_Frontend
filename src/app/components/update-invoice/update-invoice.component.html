@@ -1,0 +1,87 @@
+<body class="bg-img">
+    <div class="bg">
+    <div class="col-md-4 offset-md-4">
+    <h1 class="text-left">Update Invoice</h1>
+    
+    <form (ngSubmit)="onSubmit()" id="userInfoForm">
+        <div class="form-group">
+            <label>Company Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)] = "payment.invoice.companyName" name="name">
+        </div>
+    
+        <div class="form-group">
+            <label>Guest Id</label>
+            <input type="text" class="form-control" id="guestId" [(ngModel)] = "payment.invoice.guestId" name="guestId">
+        </div>
+    
+        <div class="form-group">
+            <label>Guest Name</label>
+           <!-- <select name="role" id="role">
+                <option value="receptionist" id="role" [(ngModel)] = "employee.role" >RECEPTIONIST</option> 
+                <option value="manager" id="role" [(ngModel)] = "employee.role" >MANAGER</option> 
+                <option value="owner" id="role" [(ngModel)] = "employee.role" >OWNER</option> 
+            </select> --> 
+           <input type="text" class="form-control" id="guestName" [(ngModel)] = "payment.invoice.guestName" name="guestName">
+        </div>
+    
+        <div class="form-group">
+            <label>Guest Mobile</label>
+            <input type="number" class="form-control" id="mobileNo" [(ngModel)] = "payment.invoice.guestMobile" name="mobileNo">
+        </div>
+       
+
+                <div class="form-group row">
+    
+                <div class="col-md-6">
+                    <label>Number of People</label>
+                    <input type="number" class="form-control" id="noOfPeople" [(ngModel)] = "payment.invoice.numberOfPeople" name="noOfPeople">
+               </div>
+    
+               <div class="col-md-6">
+                    <label>Booked Room Type</label>
+                    <input type="text" class="form-control" id="roomType" [(ngModel)] = "payment.invoice.bookedRoomType" name="roomType">
+               </div>
+    
+               <div class="col-md-6">
+                    <label>Room Price</label>
+                    <input type="number" class="form-control" id="roomPrice" [(ngModel)] = "payment.invoice.roomPricePerNight" name="roomPrice">
+               </div>
+    
+               <div class="col-md-6">
+                <label>No of Nights</label>
+                <input type="number" class="form-control" id="nights" [(ngModel)] = "payment.invoice.nights" name="nights">
+               </div>
+    
+               <div class="col-md-6">
+                <label>Booking Date</label>
+                <input type="text" class="form-control" id="date" [(ngModel)] = "payment.invoice.bookingDate" name="date">
+               </div>
+               <div class="col-md-6">
+                <label>Tax Applicable</label>
+                <input type="number" class="form-control" id="tax" [(ngModel)] = "payment.invoice.tax" name="tax">
+            </div>
+    
+
+            </div>
+
+      
+                <div class="form-group">
+                    <label>Total Bill</label>
+                    <input type="number" class="form-control" id="bill" [(ngModel)] = "payment.invoice.totalBill" name="bill">
+               </div>
+    
+               <div class="form-group">
+                   <label>Status</label>
+                   <input type="text" class="form-control" id="status" [(ngModel)]="payment.status" name="status">
+               </div>
+               <br>
+    
+        <button class="btn btn-success" type="submit" (click)="onSubmit()">Submit</button>
+        
+    
+    
+    
+    </form>
+    </div>
+</div>
+    </body>

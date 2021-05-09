@@ -1,0 +1,48 @@
+
+<div class="bg">
+    <div class="text-left">
+<h1 class="text-left">Employee Details</h1>
+
+<div>
+    <div>
+        <label><b>Name: </b>{{employee.name}}</label>
+    </div>
+    <div>
+        <label><b>Password: </b>{{employee.password}}</label>
+    </div>
+    <div>
+        <label><b>Role: </b>{{employee.role}}</label>
+    </div>
+    <div>
+        <label><b>Salary :</b>{{employee.salary}}</label>
+    </div>
+    <div>
+        <label><b>Contact Details</b></label>
+        <div>
+            <label><b>Email: </b>{{employee.details.email}}</label>
+        </div>
+        <div>
+            <label><b>Country: </b>{{employee.details.country}}</label>
+        </div>
+        <div>
+            <label><b>State: </b>{{employee.details.state}}</label>
+        </div>
+        <div>
+            <label><b>City: </b>{{employee.details.city}}</label>
+        </div>
+        <div>
+            <label><b>Street: </b>{{employee.details.state}}</label>
+        </div>
+        <div>
+            <label><b>ZipCode: </b>{{employee.details.zipcode}}</label>
+        </div>
+        <div>
+            <label><b>Mobile No: </b>{{employee.details.mobileNo}}</label>
+        </div>
+    </div>
+    
+</div>
+<button class="btn btn-secondary" type="submit" (click)="onSubmit()">Back</button>
+
+</div>
+</div>

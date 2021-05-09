@@ -1,0 +1,62 @@
+.text-left
+{
+  
+      padding-left: 600px;
+      padding-top:20px;
+      background-color: midnightblue;
+      font-style: italic;
+      color: cyan;
+      block-size: 70px;
+      font-size: 40px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      
+  
+}
+
+form{
+    color: yellow ;
+    
+    font-style: italic;
+    font-variant: normal;
+    font-stretch: extra-condensed;
+    font-size:large;
+    text-shadow: paleturquoise;
+    padding-top: 100px;
+    
+   
+    
+}
+
+/*
+.bg
+{
+    background-image: url('../../../assets/roomjpg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    
+   
+  
+}
+*/
+
+
+
+body { margin:0px; width: 100%; height: 100%; }
+.bg { background-image: url('../../../assets/roomjpg.jpg'); 
+    width: 100%; height: 100%; 
+    background-size: 100% 100%; 
+    background-repeat: no-repeat; }
+
+
+    .footer {
+        padding-top: 10px;
+        position: fixed;
+        bottom: 0;
+        width:100%;
+        height: 40px;
+        background-color:rgb(20, 18, 18);
+        color: white;
+        text-align: center;
+        
+    }

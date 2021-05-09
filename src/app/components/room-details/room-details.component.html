@@ -1,0 +1,30 @@
+<div class="bg">
+    <div class="text-left">
+        <h1 class="text-left">Room Details</h1>
+
+<div>
+    <div>
+        <label><b>Room Type: </b>{{room.roomType}}</label>
+    </div>
+    <div>
+        <label><b>Status: </b>{{room.status}}</label>
+    </div>
+    <div>
+        <label><b>Booking Details</b></label>
+        <div>
+            <label><b>Date Of Booking: </b>{{room.bookingDetails.bookingDate}}</label>
+        </div>
+        <div>
+            <label><b>No of Nights: </b>{{room.bookingDetails.nights}}</label>
+        </div>
+        <div>
+            <label><b>Guest Id: </b>{{room.bookingDetails.guestId}}</label>
+        </div>
+
+        </div>
+    
+</div>
+
+<button class="btn btn-secondary" type="submit" (click)="onSubmit()">Back</button>
+</div>
+</div>

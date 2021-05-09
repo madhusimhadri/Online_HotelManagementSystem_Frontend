@@ -1,0 +1,179 @@
+<style>
+   
+  </style>
+
+<h1 class="text-left">Make Reservation</h1>
+
+    <div  class="bg">
+        <div class="col-md-10 mx-auto">
+    
+    <form (ngSubmit)="onSubmit()" >
+        <div class="form-group row">
+            <div class="col-sm-6">
+            <label>Guest Id</label>
+            <input type="text" class="form-control" id="guestId" [(ngModel)] = "guest.id" name="guestId" placeholder="Enter Guest Id">
+            </div>
+
+            <div class="col-sm-6">
+                <label>Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)] = "guest.name" name="name" placeholder="Enter Guest Name">
+            </div>
+
+        </div>
+    
+        <div class="form-group row">
+            <div class="col-sm-6">
+            <label>Gender</label>
+            <input type="text" class="form-control" id="gender" [(ngModel)] = "guest.gender" name="gender" placeholder="Enter Gender">
+            </div>
+
+            <div class="col-sm-6">
+                <label>Age</label>
+               <!-- <select name="role" id="role">
+                    <option value="receptionist" id="role" [(ngModel)] = "employee.role" >RECEPTIONIST</option> 
+                    <option value="manager" id="role" [(ngModel)] = "employee.role" >MANAGER</option> 
+                    <option value="owner" id="role" [(ngModel)] = "employee.role" >OWNER</option> 
+                </select> --> 
+               <input type="number" class="form-control" id="age" [(ngModel)] = "guest.age" name="age" placeholder="Enter Age ">
+            </div>
+        </div>
+    
+   
+    
+        <div class="form-group row">
+
+            <div>
+            <label>Mobile Number</label>
+            <input type="number" class="form-control" id="mobileNo" [(ngModel)] = "guest.mobileNo" name="mobileNo" placeholder="Enter Mobile Number">
+            </div>
+
+
+        </div>
+        <!--
+        <ng-container ngModelGroup="memberDetails">
+        <div class="form-group">
+           
+            <label>Additional Members</label><br><br>
+                <div>
+                     <label>Name</label>
+                     <input type="text" class="form-control" id="name1" [(ngModel)] = "guest.memberDetails?.name" (ngModelChange)="guest.memberDetails && guest.memberDetails.name=$event" name="name1">
+                </div>
+    
+                <div>
+                    <label>Age</label>
+                    <input type="number" class="form-control" id="age1" [(ngModel)] = "guest.memberDetails.age" name="age1">
+               </div>
+    
+               <div>
+                    <label>Gender</label>
+                    <input type="text" class="form-control" id="gender1" [(ngModel)] = "guest.memberDetails.gender" name="gender1">
+               </div>
+        </div>
+    </ng-container>
+    -->
+    <br>
+
+        <div class="form-group row">
+       
+            <label>Address</label><br>
+    
+                <div class="col-sm-4">
+                    <label>Country</label>
+                    <input type="text" class="form-control" id="country" [(ngModel)] = "guest.address.country" name="country" placeholder="Enter country of guest">
+               </div>
+    
+               <div class="col-sm-4">
+                    <label>State</label>
+                    <input type="text" class="form-control" id="state" [(ngModel)] = "guest.address.state" name="state" placeholder="Enter State">
+               </div>
+    
+               <div class="col-sm-4">
+                    <label>City</label>
+                    <input type="text" class="form-control" id="city" [(ngModel)] = "guest.address.city" name="city" placeholder="Enter City">
+               </div>
+    
+               <div class="col-sm-4">
+                <label>Street</label>
+                <input type="text" class="form-control" id="street" [(ngModel)] = "guest.address.street" name="street" placeholder="Enter Street">
+               </div>
+    
+               <div class="col-sm-4">
+                <label>Zipcode</label>
+                <input type="text" class="form-control" id="zipcode" [(ngModel)] = "guest.address.zipcode" name="zipcode" placeholder="Enter Zipcode">
+               </div>
+
+               <div class="col-sm-4">
+                <label>Current Status</label>
+                <input type="text" class="form-control" id="status" [(ngModel)] = "guest.currentStatus" name="status" placeholder="Enter Status-checkIn/checkOut">
+            </div>
+        </div>
+
+        <br>
+        <div class="form-group row">
+           
+            <label>Room Stay</label>
+    
+                <div class="col-sm-6">
+                    <label>Room Id</label>
+                    <input type="text" class="form-control" id="roomId" [(ngModel)] = "guest.roomDetails.roomId" name="roomId" placeholder="Enter Room Id">
+               </div>
+    
+               <div class="col-sm-6">
+                    <label>Number of Nights</label>
+                    <input type="text" class="form-control" id="noOfNights" [(ngModel)] = "guest.roomDetails.noOfNights" name="noOfNights" placeholder="Enter Number of Nights">
+               </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <div class="col-sm-4">
+                <label>Room Id</label>
+                <input type="text" class="form-control" id="roomId" [(ngModel)] = "room.id" name="roomId" placeholder="Enter Room Id">
+           </div>
+
+           <div class="col-sm-4">
+                <label>Room Type</label>
+                <input type="text" class="form-control" id="noOfNights" [(ngModel)] = "room.roomType" name="noOfNights" placeholder="Enter Room Type">
+           </div>
+           <div class="col-sm-4">
+            <label>Status</label>
+            <input type="text" class="form-control" id="roomId" [(ngModel)] = "room.status" name="roomId" placeholder="Enter Room Status-Booked">
+       </div>
+
+        </div>
+        
+        <br>
+
+        <div class="form-group row">
+            
+            <label>Booking Details</label>
+            <div class="col-sm-4">
+                <label>Date Of Booking</label>
+                <input type="text" class="form-control" id="date" [(ngModel)] = "room.bookingDetails.bookingDate" name="date" placeholder="yyyy-mm-dd">
+           </div>
+
+           <div class="col-sm-4">
+                <label>Number Of Nights</label>
+                <input type="number" class="form-control" id="nights" [(ngModel)] = "room.bookingDetails.nights" name="nights" placeholder="Enter Number of Nights">
+           </div>
+           <div class="col-sm-4">
+            <label>Guest Id</label>
+            <input type="text" class="form-control" id="guestId" [(ngModel)] = "room.bookingDetails.guestId" name="guestId" placeholder="Enter Guest Id">
+       </div>
+
+        </div>
+    
+        <br>
+        
+          
+        
+           
+
+    </form>
+    <button class="btn btn-success"type="submit" (click)="onSubmit()" id="confirm">Confirm Booking</button>
+    
+    </div>
+    </div>
+
+    <footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>

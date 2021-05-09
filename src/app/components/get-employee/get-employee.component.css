@@ -1,0 +1,41 @@
+.footer {
+    padding-top: 10px;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height: 40px;
+    background-color:rgb(20, 18, 18);
+    color: white;
+    text-align: center;
+    
+}
+tbody tr:nth-child(odd) {
+    background-color: slategrey;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color:   slateblue;
+    
+  }
+  
+ 
+  
+  table {
+    background-color: magenta;
+  }
+
+  th {
+    background-color: darkblue;
+    color: white;
+  } 
+
+  #bg
+{
+    background-image: url('../../../assets/employee4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 50% 100%;
+    background-position: right;
+    background-color: rgb(82, 82, 151);
+  
+}

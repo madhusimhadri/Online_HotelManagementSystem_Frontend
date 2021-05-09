@@ -1,0 +1,56 @@
+<header>
+    <div class="text">
+        HOTEL-N  <span> Since 1983</span>
+        <!--
+        <a href="#" class="invoice">Payments</a>
+        <a href="#" class="invoice">Invoices</a>
+        <a routerLink="#" routerLinkActive="active" class="invoice" >IsuueBill</a>
+        -->
+    </div>
+    </header>
+    <body class="bg-img">
+
+
+        <div fxLayoutAlign="center center center" fxFlexFill class="login-div">
+            <mat-card fxFlex="30">
+                <mat-card-header>
+                
+            </mat-card-header>
+            <mat-toolbar > <span class="toolbar-title center">SIGN IN</span></mat-toolbar>
+            <form #loginForm="ngForm" class="login-form"
+                (ngSubmit)="authenticateUser(loginForm.value)">
+                
+
+                <div fxLayoutAlign="stretch" fxLayout="column" >
+                    <mat-form-field>
+                        <mat-label>EmployeeId</mat-label>
+
+                        <input matInput placeholder="employeeId" #nameRef="ngModel" name="username"
+                            [(ngModel)]="logInUserData.username" required>
+
+                    </mat-form-field>
+                    <div [hidden]="nameRef.valid || !nameRef.touched" class="alert alert-danger">
+                        Please enter EmployeeId
+                    </div>
+                    <mat-form-field>
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="password" type="password" #passRef="ngModel" name="password"
+                            [(ngModel)]="logInUserData.password" required>
+                    </mat-form-field>
+                    <div [hidden]="passRef.valid || !passRef.touched" class="alert alert-danger">
+                        Please enter Password
+                    </div>
+                    <button [disabled]="loginDisabled || !loginForm.valid"  mat-raised-button
+                        type="submit">Sign In</button>
+                    <div [hidden]="!badCredentials" class="alert alert-danger">
+                        Invalid employeeId or password
+                    </div>
+
+                </div>
+            </form>
+            
+        </mat-card>
+        </div>
+    </body>
+
+    <footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>

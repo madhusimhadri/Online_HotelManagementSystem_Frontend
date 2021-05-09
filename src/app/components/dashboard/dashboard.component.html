@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class = "navbar-nav">
+
+        <li class = "nav-item">
+            <button class="btn btn-success" style="margin-left: 10px;">    <a routerLink="home" routerLinkActive="active" class="nav-link" ><span class="material-icons">
+                home
+                </span></a></button>
+        </li>
+
+        <li class = "nav-item">
+          <a routerLink="getroom" routerLinkActive="active" class="nav-link" style="margin-left: 15px;">Room List <span class="material-icons">
+            list
+            </span></a>
+    </li>
+
+    
+    <li class = "nav-item">
+      <a routerLink="addroom" routerLinkActive="active" class="nav-link" style="margin-left: 15px;" >Add Room <span class="material-icons">
+       meeting_room
+       </span>
+      </a>
+</li>
+
+<li class = "nav-item">
+  <a routerLink="getguest" routerLinkActive="active" class="nav-link" style="margin-left: 15px;">Guest List <span class="material-icons">
+    list
+    </span></a>
+</li>
+
+<li class = "nav-item">
+  <a routerLink="addguest" routerLinkActive="active" class="nav-link" style="margin-left: 15px;">Add Guest<span class="material-icons">
+   hail
+   </span></a>
+</li>
+
+
+       
+
+        
+
+        <li class = "nav-item">
+              <a routerLink="reserve-room" routerLinkActive="active" class="nav-link" style="margin-left: 15px;">Make Reservation <span class="material-icons">
+                hotel
+                </span></a>
+        </li>
+
+        <li class = "nav-item">
+          <a routerLink="getinvoice" routerLinkActive="active" class="nav-link" style="margin-left: 15px;">Invoices <span class="material-icons">
+             receipt
+             </span></a>
+     </li>
+
+     <li class = "nav-item">
+      <a routerLink="getemployee" routerLinkActive="active" class="nav-link" style="margin-left: 15px;">Employee List <span class="material-icons">
+        list
+        </span></a>
+    </li>
+    
+            <li class = "nav-item">
+          <a routerLink="addemployee" routerLinkActive="active" class="nav-link"  style="margin-left: 15px;">Add Employee <span class="material-icons">
+                person_add
+                </span></a>
+            </li>
+
+        <li class = "nav-item">
+              <a routerLink="outline" routerLinkActive="active" class="nav-link" style="margin-left: 15px;">Explore <span class="material-icons">
+                panorama
+                </span></a>
+        </li>
+
+       
+
+       
+        
+        
+            <button class="btn btn-success" (click)="logOut()" style="margin-left: 220px "><span class="material-icons">
+                logout
+                </span></button>
+      
+    
+        
+    
+    </ul>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,127 @@
+<style>
+    input{
+      background-color: gray;
+      color: black;
+    }
+  </style>
+
+
+
+<body class="bg-img">
+    <div class="bg">
+    <div class="col-md-4 offset-md-4">
+    <h1 class="text-left">Update Guest</h1>
+    
+    <form (ngSubmit)="onSubmit()" id="userInfoForm">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)] = "guest.name" name="name">
+        </div>
+    
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="text" class="form-control" id="gender" [(ngModel)] = "guest.gender" name="gender">
+        </div>
+    
+        <div class="form-group">
+            <label>Age</label>
+           <!-- <select name="role" id="role">
+                <option value="receptionist" id="role" [(ngModel)] = "employee.role" >RECEPTIONIST</option> 
+                <option value="manager" id="role" [(ngModel)] = "employee.role" >MANAGER</option> 
+                <option value="owner" id="role" [(ngModel)] = "employee.role" >OWNER</option> 
+            </select> --> 
+           <input type="number" class="form-control" id="age" [(ngModel)] = "guest.age" name="age">
+        </div>
+    
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="number" class="form-control" id="mobileNo" [(ngModel)] = "guest.mobileNo" name="mobileNo">
+        </div>
+        <!--
+        <ng-container ngModelGroup="memberDetails">
+        <div class="form-group">
+           
+            <label>Additional Members</label><br><br>
+                <div>
+                     <label>Name</label>
+                     <input type="text" class="form-control" id="name1" [(ngModel)] = "guest.memberDetails?.name" (ngModelChange)="guest.memberDetails && guest.memberDetails.name=$event" name="name1">
+                </div>
+    
+                <div>
+                    <label>Age</label>
+                    <input type="number" class="form-control" id="age1" [(ngModel)] = "guest.memberDetails.age" name="age1">
+               </div>
+    
+               <div>
+                    <label>Gender</label>
+                    <input type="text" class="form-control" id="gender1" [(ngModel)] = "guest.memberDetails.gender" name="gender1">
+               </div>
+        </div>
+    </ng-container>
+    -->
+
+        <div class="form-group row">
+       
+            <label>Address</label><br><br>
+    
+                <div class="col-md-6">
+                    <label>Country</label>
+                    <input type="text" class="form-control" id="country" [(ngModel)] = "guest.address.country" name="country">
+               </div>
+    
+               <div class="col-md-6">
+                    <label>State</label>
+                    <input type="text" class="form-control" id="state" [(ngModel)] = "guest.address.state" name="state">
+               </div>
+    
+               <div class="col-md-6">
+                    <label>City</label>
+                    <input type="text" class="form-control" id="city" [(ngModel)] = "guest.address.city" name="city">
+               </div>
+    
+               <div class="col-md-6">
+                <label>Street</label>
+                <input type="text" class="form-control" id="street" [(ngModel)] = "guest.address.street" name="street">
+               </div>
+    
+               <div class="col-md-6">
+                <label>ZipCode</label>
+                <input type="text" class="form-control" id="zipcode" [(ngModel)] = "guest.address.zipcode" name="zipcode">
+               </div>
+
+               <div class="col-md-6">
+                <label>Current Status</label>
+                <input type="text" class="form-control" id="status" [(ngModel)] = "guest.currentStatus" name="status">
+            </div>
+        </div>
+
+       
+
+        <div class="form-group row">
+       
+            <label>Room Stay</label><br><br>
+    
+                <div class="col-md-6">
+                    <label>Room Id</label>
+                    <input type="text" class="form-control" id="roomId" [(ngModel)] = "guest.roomDetails.roomId" name="roomId">
+               </div>
+    
+               <div class="col-md-6">
+                    <label>Number of Nights</label>
+                    <input type="number" class="form-control" id="noOfNights" [(ngModel)] = "guest.roomDetails.noOfNights" name="noOfNights">
+               </div>
+
+        </div>
+        
+
+           
+    
+        <button class="btn btn-success" type="submit" (click)="onSubmit()">Submit</button>
+        
+    
+    
+    
+    </form>
+    </div>
+</div>
+    </body>

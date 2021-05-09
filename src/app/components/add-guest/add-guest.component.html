@@ -1,0 +1,318 @@
+<style>
+  input{
+    background-color: white;
+ 
+  }
+</style>
+
+
+<div class="bg">
+
+<h1 class="text-left">Add Guest</h1>
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-12 col-lg-6" >
+        
+              
+    
+    <form (ngSubmit)="onSubmit()" id="userInfoForm" #loginForm="ngForm" >
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)] = "guest.name" name="name" #name="ngModel" required minlength="3">
+
+            
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+        class="alert alert-danger">
+    
+      <div *ngIf="name.errors.required">
+        Name is required.
+      </div>
+      <div *ngIf="name.errors.minlength">
+        Name must be at least 3 characters long.
+      </div>
+      <div *ngIf="name.errors.forbiddenName">
+        Name cannot be Bob.
+      </div>
+    
+        </div>
+
+        </div>
+    
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="text" class="form-control" id="gender" [(ngModel)] = "guest.gender" name="gender">
+        </div>
+    
+        <div class="form-group">
+            <label>Age</label>
+           <!-- <select name="role" id="role">
+                <option value="receptionist" id="role" [(ngModel)] = "employee.role" >RECEPTIONIST</option> 
+                <option value="manager" id="role" [(ngModel)] = "employee.role" >MANAGER</option> 
+                <option value="owner" id="role" [(ngModel)] = "employee.role" >OWNER</option> 
+            </select> --> 
+           <input type="number" class="form-control" id="age" [(ngModel)] = "guest.age" name="age" #age="ngModel"  required maxlength="3">
+
+           <div *ngIf="age.invalid && (age.dirty || age.touched)"
+           class="alert alert-danger">
+       
+         <div *ngIf="age.errors.required">
+           Age is required.
+         </div>
+         <div *ngIf="name.errors.maxlength">
+           Maximum 3 digits allowed
+         </div>
+         <div *ngIf="name.errors.forbiddenName">
+           Age cannot be Bob.
+         </div>
+       
+           </div>
+
+
+        </div>
+    
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="number" class="form-control" id="mobileNo" [(ngModel)] = "guest.mobileNo" name="mobileNo" #mobileNo="ngModel" required minlength="10">
+
+            <div *ngIf="mobileNo.invalid && (mobileNo.dirty || mobileNo.touched)"
+            class="alert alert-danger">
+        
+          <div *ngIf="mobileNo.errors.required">
+            Mobile Number is required.
+          </div>
+          <div *ngIf="mobileNo.errors.minlength">
+           Must be atleast 10 digits
+          </div>
+          <div *ngIf="mobileNo.errors.forbiddenName">
+            Mobile Number cannot be Bob.
+          </div>
+        
+            </div>
+
+
+        </div>
+        <!--
+        <ng-container ngModelGroup="memberDetails">
+        <div class="form-group">
+           
+            <label>Additional Members</label><br><br>
+                <div>
+                     <label>Name</label>
+                     <input type="text" class="form-control" id="name1" [(ngModel)] = "guest.memberDetails?.name" (ngModelChange)="guest.memberDetails && guest.memberDetails.name=$event" name="name1">
+                </div>
+    
+                <div>
+                    <label>Age</label>
+                    <input type="number" class="form-control" id="age1" [(ngModel)] = "guest.memberDetails.age" name="age1">
+               </div>
+    
+               <div>
+                    <label>Gender</label>
+                    <input type="text" class="form-control" id="gender1" [(ngModel)] = "guest.memberDetails.gender" name="gender1">
+               </div>
+        </div>
+    </ng-container>
+    -->
+
+        <div class="form-group row">
+       
+            <label>Address</label><br><br>
+    
+                <div class="col-sm-3">
+                    <label>Country</label>
+                    <input type="text" class="form-control" id="country" [(ngModel)] = "guest.address.country" name="country" #country="ngModel" required minlength="3">
+
+                    <div *ngIf="country.invalid && (country.dirty || country.touched)"
+                    class="alert alert-danger">
+                
+                  <div *ngIf="country.errors.required">
+                    Country is required.
+                  </div>
+                  <div *ngIf="country.errors.minlength">
+                    Country must be atleast 3 characters long
+                  </div>
+                  <div *ngIf="country.errors.forbiddenName">
+                    Country cannot be Bob.
+                  </div>
+                
+                    </div>
+
+
+               </div>
+    
+               <div class="col-sm-3">
+                    <label>State</label>
+                    <input type="text" class="form-control" id="state" [(ngModel)] = "guest.address.state" name="state" #state="ngModel" required minlength="3">
+
+                    <div *ngIf="state.invalid && (state.dirty || state.touched)"
+                    class="alert alert-danger">
+                
+                  <div *ngIf="state.errors.required">
+                    State is required.
+                  </div>
+                  <div *ngIf="state.errors.minlength">
+                    State must be atleast 3 characters long
+                  </div>
+                  <div *ngIf="state.errors.forbiddenName">
+                    State cannot be Bob.
+                  </div>
+                
+                    </div>
+
+               </div>
+    
+               <div class="col-sm-3">
+                    <label>City</label>
+                    <input type="text" class="form-control" id="city" [(ngModel)] = "guest.address.city" name="city" #city="ngModel" required minlength="3">
+
+                    <div *ngIf="city.invalid && (city.dirty || city.touched)"
+                    class="alert alert-danger">
+                
+                  <div *ngIf="city.errors.required">
+                    City is required.
+                  </div>
+                  <div *ngIf="city.errors.minlength">
+                    City must be atleast 3 characters long
+                  </div>
+                  <div *ngIf="city.errors.forbiddenName">
+                    City cannot be admin.
+                  </div>
+                
+                    </div> 
+
+               </div>
+    
+               <div class="col-sm-3">
+                <label>Street</label>
+                <input type="text" class="form-control" id="street" [(ngModel)] = "guest.address.street" name="street" #street="ngModel" required minlength="3">
+
+                
+            
+            <div *ngIf="street.invalid && (street.dirty || street.touched)"
+            class="alert alert-danger">
+        
+          <div *ngIf="street.errors.required">
+            Street is required.
+          </div>
+          <div *ngIf="street.errors.minlength">
+            Street must be atleast 3 characters long
+          </div>
+          <div *ngIf="street.errors.forbiddenName">
+            Street cannot be admin.
+          </div>
+        
+            </div> 
+
+               </div>
+    
+               <div class="col-sm-6">
+                <label>Zipcode</label>
+                <input type="number" class="form-control" id="zipcode" [(ngModel)] = "guest.address.zipcode" name="zipcode" #zipcode="ngModel" required minlength="6">
+
+                <div *ngIf="zipcode.invalid && (zipcode.dirty || zipcode.touched)"
+                class="alert alert-danger">
+            
+              <div *ngIf="zipcode.errors.required">
+                Zipcode is required.
+              </div>
+              <div *ngIf="zipcode.errors.minlength">
+                Zipcode must be atleast 6 digits long
+              </div>
+              <div *ngIf="zipcode.errors.forbiddenName">
+                Zipcode cannot be admin.
+              </div>
+            
+                </div> 
+    
+
+
+               </div>
+               <div class="col-sm-6">
+                <label>Current Status</label>
+                <input type="text" class="form-control" id="status" [(ngModel)] = "guest.currentStatus" name="status">
+            </div>
+        </div>
+
+        
+
+        <div class="form-group row">
+       
+            <label>Room Stay</label><br><br>
+    
+                <div class="col-sm-6">
+                    <label>Room Id</label>
+                    <input type="text" class="form-control" id="roomId" [(ngModel)] = "guest.roomDetails.roomId" name="roomId" #roomId="ngModel" required minlength="2">
+
+                    
+                <div *ngIf="roomId.invalid && (roomId.dirty || roomId.touched)"
+                class="alert alert-danger">
+            
+              <div *ngIf="roomId.errors.required">
+                Id is required.
+              </div>
+              <div *ngIf="roomId.errors.minlength">
+                Id must be atleast 2 characters long
+              </div>
+              <div *ngIf="roomId.errors.forbiddenName">
+                Id cannot be admin.
+              </div>
+            
+                </div> 
+
+               </div>
+    
+               <div class="col-sm-6">
+                    <label>Number of Nights</label>
+                    <input type="number" class="form-control" id="noOfNights" [(ngModel)] = "guest.roomDetails.noOfNights" name="noOfNights" #noOfNights="ngModel" required>
+
+                    <div *ngIf="noOfNights.invalid && (noOfNights.dirty || noOfNights.touched)"
+                    class="alert alert-danger">
+                
+                  <div *ngIf="noOfNights.errors.required">
+                    Number of nights is required.
+                  </div>
+                  <div *ngIf="noOfNights.errors.minlength">
+                    Number must be atleast 1 characters long
+                  </div>
+                  <div *ngIf="noOfNights.errors.forbiddenName">
+                    Number cannot be admin.
+                  </div>
+                
+                    </div> 
+
+               </div>
+
+        </div>
+        <br>
+    
+        <button class="btn btn-success" type="submit" (click)="onSubmit()" [disabled]="!loginForm.valid">Submit</button>
+        
+    
+    
+    
+    </form>
+    </div>
+
+    
+     
+
+    
+
+    
+    </div>
+  </div>
+    
+<!--
+    <footer>
+        <div class="col-lg-6">
+        <img src="../../../assets/jeshoots-com-mSESwdMZr-A-unsplash.jpg" class="img-fluid">
+    </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5>&copy;  All Rights Reserved 2021@Hotel-N</h5>
+                </div>
+    </footer>
+
+-->
+
+<footer class="footer">  &copy; 2021 Hotel-N. All Rights Reserved </footer>

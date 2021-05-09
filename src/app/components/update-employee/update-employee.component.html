@@ -1,0 +1,88 @@
+
+<style>
+    input{
+      background-color: gray;
+      color: black;
+    }
+  </style>
+
+<div class="bg">
+<div class="col-md-4 offset-md-4">
+
+    <h1 class="text-left">Update Employee</h1>
+    
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)] = "employee.name" name="name">
+        </div>
+    
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" id="password" [(ngModel)] = "employee.password" name="password">
+        </div>
+    
+        <div class="form-group">
+            <label>Role</label>
+           <!-- <select name="role" id="role">
+                <option value="receptionist" id="role" [(ngModel)] = "employee.role" >RECEPTIONIST</option> 
+                <option value="manager" id="role" [(ngModel)] = "employee.role" >MANAGER</option> 
+                <option value="owner" id="role" [(ngModel)] = "employee.role" >OWNER</option> 
+            </select> --> 
+           <input type="text" class="form-control" id="role" [(ngModel)] = "employee.role" name="role">
+        </div>
+    
+        <div class="form-group">
+            <label>Salary</label>
+            <input type="number" class="form-control" id="salary" [(ngModel)] = "employee.salary" name="salary">
+        </div>
+    
+        <div class="form-group">
+           
+            <label>Contact Details</label><br><br>
+                <div>
+                     <label>Email</label>
+                     <input type="email" class="form-control" id="email" [(ngModel)] = "employee.details.email" name="email">
+                </div>
+                <div class="form-group row">
+                <div class="col-md-6">
+                    <label>Country</label>
+                    <input type="text" class="form-control" id="country" [(ngModel)] = "employee.details.country" name="country">
+               </div>
+    
+               <div class="col-md-6">
+                    <label>State</label>
+                    <input type="text" class="form-control" id="state" [(ngModel)] = "employee.details.state" name="state">
+               </div>
+    
+               <div class="col-md-6">
+                    <label>City</label>
+                    <input type="text" class="form-control" id="city" [(ngModel)] = "employee.details.city" name="city">
+               </div>
+    
+               <div class="col-md-6">
+                <label>Street</label>
+                <input type="text" class="form-control" id="street" [(ngModel)] = "employee.details.street" name="street">
+               </div>
+    
+               <div class="col-md-6">
+                <label>ZipCode</label>
+                <input type="text" class="form-control" id="zipcode" [(ngModel)] = "employee.details.zipcode" name="zipcode">
+               </div>
+    
+               <div class="col-md-6">
+                <label>Mobile Number</label>
+                <input type="number" class="form-control" id="number" [(ngModel)] = "employee.details.mobileNo" name="number">
+               </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-success" type="submit" (click)="onSubmit()">Submit</button>
+        
+    
+    
+    
+    </form>
+    </div>
+</div>

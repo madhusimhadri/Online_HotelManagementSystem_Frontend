@@ -1,0 +1,124 @@
+
+.stat-name{
+    background-image: linear-gradient(to right, #464785, #3A6073);
+    color: #fff;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+   
+}
+
+.card-1 {
+  background-image: linear-gradient(to right, #7e0707, #c7495a);
+  color: #fff;
+}
+.card-2 {
+  background-image: linear-gradient(to right, #fe8c00, #f83600);
+  color: #fff;
+}
+.card-3 {
+  background-image: linear-gradient(to right, #ffbb00, #d8cd31);
+  color: #fff;
+}
+.card-head {
+  justify-content: space-around;
+}
+.card-name {
+  font-size: 18px;
+  float: left;
+  font-weight: bold;
+}
+.card-logo {
+  text-align: right;
+    text-decoration-color: lawngreen;
+}
+mat-icon {
+  font-weight: bold;
+  font-size: 50px;
+  margin-right: 20px;
+}
+mat-card {
+  margin: 5px 5px 5px;
+  width: 30%;
+}
+.card-container {
+  display: flex;
+  justify-content: space-around;
+}
+.card-container {
+  display: flex;
+  justify-content: space-around;
+}
+/*Responsive screen css*/
+@media screen and (max-width: 800px) {
+  .card-container {
+    display: list-item;
+  }
+  mat-card {
+    margin: 5px 5px 5px;
+    width: 100%;
+  }
+}
+
+.card-value {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  font-size: 18px;
+}
+
+header
+{
+  block-size: 50px;
+  position: relative;
+  width: 100%;
+  height: 60px;
+ /* background-color: rosybrown;*/
+ background-color: ro;
+  font-size: xx-large;
+  text-align: start;
+}
+
+.text{
+  background-color: navy;
+  background-size: 100px;
+  block-size: 60px;
+  font-size: 40px;
+  text-align: start;
+  color: aqua;
+
+}
+
+.text{
+  text-align: center;
+  padding-top: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  
+}
+
+.footer {
+  padding-top: 10px;
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  height: 40px;
+  background-color:rgb(20, 18, 18);
+  color: white;
+  text-align: center;
+  
+}
+
+body { margin:0px; width: 100%; height: 100%; }
+.bg { background-image: url('../../../assets/stats.jpg'); 
+    width: 100%; height: 100%; 
+    background-size: 100% 100%; 
+    background-repeat: no-repeat; }

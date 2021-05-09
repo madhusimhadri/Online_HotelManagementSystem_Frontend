@@ -1,0 +1,55 @@
+
+<div class="bg">
+<div class="text-left">
+    <h1 class="text-left">Guest Details</h1>
+  
+    <div>
+        <label><b>Name: </b>{{guest.name}}</label>
+    </div>
+    <div>
+        <label><b>Gender: </b>{{guest.gender}}</label>
+    </div>
+    <div>
+        <label><b>Age: </b>{{guest.age}}</label>
+    </div>
+    <div>
+        <label><b>Mobile Number:</b>{{guest.mobileNo}}</label>
+    </div>
+    <div>
+        <label><b>Address</b></label>
+        <div>
+            <label><b>Country: </b>{{guest.address.country}}</label>
+        </div>
+        <div>
+            <label><b>State: </b>{{guest.address.state}}</label>
+        </div>
+        <div>
+            <label><b>City: </b>{{guest.address.city}}</label>
+        </div>
+        <div>
+            <label><b>Street: </b>{{guest.address.street}}</label>
+        </div>
+        <div>
+            <label><b>ZipCode: </b>{{guest.address.zipcode}}</label>
+        </div>
+        </div>
+        
+        <div>
+            <label><b>Current Status: </b>{{guest.currentStatus}}</label>
+        </div>
+
+        <div>
+            <label><b>Room Stay</b></label>
+        <div>
+            <label><b>Room Id: </b>{{guest.roomDetails.roomId}}</label>
+        </div>
+        <div>
+            <label><b>Number of Nights: </b>{{guest.roomDetails.noOfNights}}</label>
+        </div>
+        </div>
+        <button class="btn btn-secondary " type="submit" (click)="onSubmit()" >Back</button>
+    
+</div>
+
+
+</div>
