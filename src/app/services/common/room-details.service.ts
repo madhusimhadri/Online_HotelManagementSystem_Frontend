@@ -37,7 +37,7 @@ export class RoomDetailsService {
 
 
 
-	private url2 = `http://localhost:8084/receptionist/getAllRoomsByStatus/{status}`;  
+	private url2 = `http://localhost:8084/receptionist/getAllRoomsByStatus/${status}`;  
 	getRoomByStatus(status: string): Observable<Room[]> {
 		
 		return this.httpclient.get<Room[]>(`${this.url2}`, this.requestOptions);
@@ -71,5 +71,11 @@ export class RoomDetailsService {
 	  {
 		  return this.httpclient.put<Show>(`${this.url7}`,bookingData,this.requestOptions);
 	  }
+
+	  //new
+	  getRoomByType(type: string): Observable<Room[]> {
+		let _url = `http://localhost:8084/receptionist/getAllRoomsByType/${type}`;
+		return this.httpclient.get<Room[]>(_url, this.requestOptions);
+	}
   
 }
